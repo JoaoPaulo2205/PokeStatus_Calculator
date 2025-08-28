@@ -16,7 +16,7 @@ public class Screen extends JFrame {
         setResizable(false);
         setLocationRelativeTo(null);
 
-        ImageIcon icon = new ImageIcon("C:/Users/Ana Julia/IdeaProjects/PokeStatsCalculator/src/pokestats/images/pokeball.png");
+        ImageIcon icon = new ImageIcon("C:/Users/user/IdeaProjects/PokeStatsCalculator/src/pokestats/images/pokeball.png");
         setIconImage(icon.getImage());
 
         setLayout(null);
@@ -74,7 +74,7 @@ public class Screen extends JFrame {
 
         JLabel imageLabel = new JLabel();
 
-        ImageIcon pokemon_image = new ImageIcon("C:/Users/Ana Julia/IdeaProjects/PokeStatsCalculator/src/pokestats/images/gengar.png");
+        ImageIcon pokemon_image = new ImageIcon("C:/Users/user/IdeaProjects/PokeStatsCalculator/src/pokestats/images/gengar.png");
         imageLabel.setIcon(pokemon_image);
 
 
@@ -117,3 +117,4 @@ public class Screen extends JFrame {
 
 
 }
+
