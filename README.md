@@ -9,3 +9,5 @@ I used JLabel for image and text in JFrame, ImageIcon to setup the image in JLab
 Haven't made validantions yet, like, the IV cant be higher than 100 or less than 0.
 there are a few more changes to add, thats it for day two.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For day three i only added the classification of what IV lvl the pokemon are, and i added the icon, it was a huge challenge, since there is a lot of ways to do it, but none seemed to be working anymore, it whas tough, but was worth it.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
