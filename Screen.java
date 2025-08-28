@@ -16,6 +16,9 @@ public class Screen extends JFrame {
         setResizable(false);
         setLocationRelativeTo(null);
 
+        ImageIcon icon = new ImageIcon("C:/Users/Ana Julia/IdeaProjects/PokeStatsCalculator/src/pokestats/images/pokeball.png");
+        setIconImage(icon.getImage());
+
         setLayout(null);
 
         JButton calculate = new JButton();
@@ -69,20 +72,18 @@ public class Screen extends JFrame {
         add(hp);
 
 
-
-
-
         JLabel imageLabel = new JLabel();
-        ImageIcon pokemon_image = new ImageIcon("C:/Users/user/IdeaProjects/PokeStatsCalculator/src/pokestats/images/gengar.png");
 
+        ImageIcon pokemon_image = new ImageIcon("C:/Users/Ana Julia/IdeaProjects/PokeStatsCalculator/src/pokestats/images/gengar.png");
         imageLabel.setIcon(pokemon_image);
+
+
 
         imageLabel.setBounds(80, 40, 200, 200);
         add(imageLabel);
 
         setVisible(true);
     }
-
 
     public void calcularIV(ActionEvent ActionEvent){
 
@@ -91,8 +92,28 @@ public class Screen extends JFrame {
         Double hp = Double.parseDouble(valueHP.getText());
 
         double result = (((attack + defense + hp) / 45) * 100);
-        String resultIV = String.format("Your Pokemon IV is: %.0f%%", result);
+
+        String classifiedAs = " ";
+        if(result < 0 || result > 100) {
+            classifiedAs = "Inválid!";
+        }else if (result >= 0 && result <= 33.33){
+            classifiedAs = "1 Star.";
+        }else if(result > 33.3 && result < 66.66){
+            classifiedAs = "2 Stars.";
+        }else if(result > 66.66 && result <= 80){
+            classifiedAs = "3 Stars.";
+        }else if(result > 80 && result <= 90) {
+            classifiedAs = "Good Pokemon.";
+        }else if(result > 90 && result < 100) {
+            classifiedAs = "Very Good Pokemon.";
+        }else if(result == 100) {
+            classifiedAs = " 100%% perfect!";
+        }
+        
+        String resultIV = String.format("Your Pokemon IV is: %.0f%% %s", result, classifiedAs);
         JOptionPane.showMessageDialog(null, resultIV, "IV", JOptionPane.INFORMATION_MESSAGE);
     }
+    
+
 
 }
